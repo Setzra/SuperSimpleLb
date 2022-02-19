@@ -1,5 +1,5 @@
 # Super Simple Load Balancer Example
-This is a simple load balancer with fake load balancing in order to demonstrate knowledge of what load balancing is and how to achieve (to a point) load balancing while taking a bit into account extensability. 
+This is a simple load balancer with fake load balancing in order to demonstrate knowledge of what load balancing is and how to achieve (to a point) load balancing while taking a bit into account extendability. 
 Could be greatly improved (see [improvements](#improvements))
 
 ## Requirements
@@ -11,7 +11,7 @@ Could be greatly improved (see [improvements](#improvements))
 
 # How to install and run
 ## Installing Python and Dependencies
-In case you've never installed Python or haven't updated past Python 2 (shame on you), I find the easiest tool to use is [miniconda](https://docs.conda.io/en/latest/miniconda.html), which is basically virtualenv rolled together with a better package manager than pip if you want to use it. The environments miniconda creates are completely isolated and allow for custom Python versions without impacting the system Python installs or other Python projects you may have. 
+In case you've never installed Python or haven't updated beyond Python 2 (shame on you), I find the easiest tool to use is [miniconda](https://docs.conda.io/en/latest/miniconda.html), which is basically virtualenv rolled together with a better package manager than pip if you want to use it. The environments miniconda creates are completely isolated and allow for custom Python versions without impacting the system Python installs or other Python projects you may have. 
 
 Assuming you install Conda (on Windows you will need to use the Anaconda Powershell instance):
 ```bash
