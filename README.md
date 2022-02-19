@@ -53,9 +53,31 @@ The [service config file](config.json) should be straightforward to figure you. 
 
 | Action | How to do |
 | --- | --- |
-
+| List Services | GET at `/services` to get a full list of services being balance, and GET at `/services/{service_name}` to get details on a particular service |
+| Add a Service | POST or PUT at `/services/{service_name}` and you should see your service in the list |
+| Modify a Service | PUT or PATCH at `/services/{service_name}` which will either overwrite the entire service definition (PUT) or update whatever piece you provide |
+| Send a Request to a Service | Use whatever method you'd like at `/{service_name}/{path}` and it will be "load-balanced" around the hosts configured. This assumes you've inputted a path that you list in the service definition.
 
 ## Unit Tests
+The [unit tests](tests/) are written without any nice framework simply to prevent more dependencies and any possible headaches in getting them to pass. Output is pretty ugly, but the tests work.
+
+To run the tests:
+```bash
+cd $THE_DIR_THIS_README_IS_IN # Make sure you're in the right place and in the right environment! See install notes above
+
+python -m unittest tests.serviceManagementTests tests.loadBalanceTests
+```
+This should result in output such as:
+
+```bash
+
+{bunch of gross output}
+.
+----------------------------------------------------------------------
+Ran 15 tests in 0.187s
+
+OK
+```
 
 ---
 ## Improvements
